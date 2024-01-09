@@ -385,6 +385,10 @@ cat ~/.ssh/id_rsa.pub
 ```bash
 sudo apt get update && sudo apt install nodejs npm
 ```
+- Installez les dépendances
+```bash
+npm install
+```
 - Installez pm2
 ```bash
 sudo npm install pm2@latest -g
