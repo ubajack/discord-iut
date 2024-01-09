@@ -383,7 +383,7 @@ cat ~/.ssh/id_rsa.pub
 - Déplacez-vous dans ce répertoire
 - Installez `npm` et `nodejs`
 ```bash
-sudo apt install nodejs npm
+sudo apt get update && sudo apt install nodejs npm
 ```
 - Installez pm2
 ```bash
