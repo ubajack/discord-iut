@@ -389,6 +389,17 @@ sudo apt install nodejs npm
 ```bash
 sudo npm install pm2@latest -g
 ```
+- Créez un fichier .env 
+```bash
+nano .env
+```
+- Copiez et collez le contenu de votre fichier .env dans votre projet (CTRL+MAJ+V)
+```
+TOKEN=...
+CLIENT_ID=...
+GUILD_ID=...
+```
+- Tapez `CTRL+X` suivi de `y` puis `ENTREE` pour sauvegarder
 - Exécutez votre application
 ```bash
 pm2 start index.js
