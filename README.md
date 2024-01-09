@@ -354,3 +354,43 @@ client.login(process.env.TOKEN);
     ```
     - Exécutez le fichier `deploy-commands.js`
     - Testez la commande
+
+## Création du repo git
+
+- Sur Github, créer un nouveau répertoire privé
+- Ajoutez `ubajack` en tant que collaborateur
+- A la racine du projet, créez un fichier `.gitignore` de la sorte :
+```
+.env
+node_modules
+```
+- Suivez les instructions sur Github pour votre premier commit et votre premier push vers le répertoire distant
+
+## Déploiement
+
+- Récupérez l'adresse ip de votre instance OVH de même que la clé ssh vous permettant de vous y connecter
+- Connectez-vous à l'instance
+- Créez une clé SSH
+```bash
+ssh-keygen
+```
+- Copiez la clé créée
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+- Ajoutez-là à votre compte Github (Settings > SSH and GPG keys > New SSH key)
+- Clonez votre répertoire via l'adresse SSH
+- Déplacez-vous dans ce répertoire
+- Installez `npm` et `nodejs`
+```bash
+sudo apt install nodejs npm
+```
+- Installez pm2
+```bash
+sudo npm install pm2@latest -g
+```
+- Exécutez votre application
+```bash
+pm2 start index.js
+```
+- Testez votre bot sur votre serveur
